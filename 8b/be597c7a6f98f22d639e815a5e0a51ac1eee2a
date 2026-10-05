@@ -1,0 +1,29 @@
+docs/application/codex-open-source-fund.md
+  s_fcf278cc7d0219::t_fc120a55860513 16
+  s_fcf278cc7d0219::t_ea17cded182a01 44
+deployment/.env.example
+  s_fcf278cc7d0219::t_fc120a55860513 5
+  s_fcf278cc7d0219::t_64dbd9a0ebb585 4,6-7
+CONTRIBUTING.md
+  s_fcf278cc7d0219::t_1dcd8d776c7e47 9-10
+DATA-LICENSE.md
+  s_fcf278cc7d0219::t_5bb684868a3067 3,5-7,9-16,19
+README.md
+  s_fcf278cc7d0219::t_fd888308ea3d20 175-176
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8bbe597c7a6f98f22d639e815a5e0a51ac1eee2a",
+  "prompts": {},
+  "sessions": {
+    "s_fcf278cc7d0219": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1097f-afd1-78c2-bf3f-f5e7e95727b5",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
