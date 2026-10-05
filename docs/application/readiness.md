@@ -15,7 +15,7 @@ and actions requiring an owner or host. Do not imply an application was submitte
 | Website About/contact/privacy and same-origin API examples | Implemented; identity configurable | /#/about, /#/privacy, /#/developers |
 | Public maintainer/contact | Awaiting owner details | PUBLIC_MAINTAINER, PUBLIC_CONTACT_EMAIL |
 | Original metadata licence | Awaiting owner approval | DATA-LICENSE.md; proposed CC BY 4.0 |
-| GitHub repository publication | Destination confirmed; publication pending | ruhu-ai/open-alvary |
+| GitHub repository publication | Private repository created and candidate pushed; public release pending | https://github.com/ruhu-ai/open-alvary |
 | Live hosting/domain/TLS | Awaiting chosen host/access | open.alvary.ai is intended, not deployed |
 | Monitored contact, alert recipient and off-host backups | Owner/host actions outstanding | deployment/runbook.md |
 | Legal full-text rights clearance | Not complete; outside metadata pilot | All seed rights remain under review |

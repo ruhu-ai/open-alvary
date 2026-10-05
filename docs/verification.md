@@ -30,6 +30,12 @@ attribution, independent content review, API leakage, citation ambiguity, byte a
 storage immutability, ingestion idempotency, parser/OCR fallback, release integrity and
 withdrawal, mandatory manifest hashes, health readiness and launch configuration.
 
+## Repository release preparation
+
+The release candidate has been committed and pushed to the private repository
+https://github.com/ruhu-ai/open-alvary. Local checks were rerun: 51 tests, Ruff and
+the production web build pass. GitHub CI and public publication remain to be verified.
+
 ## Not yet complete
 
 Public GitHub publication; real maintainer/contact verification; metadata licence
