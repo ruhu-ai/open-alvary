@@ -13,7 +13,7 @@ collaborators and API-credit use. A completed website is not stated as a prerequ
 
 - First name: applicant to supply.
 - Last name: applicant to supply.
-- Email: ijidai@alvary.ai (applicant-selected address; confirm monitored before submission).
+- Email: ijidai@ruhu.ai (applicant-selected address; confirm monitored before submission).
 - LinkedIn: optional; supply only if desired.
 - Personal GitHub: authenticated account observed as Jidayi; applicant to confirm.
 - Project GitHub: https://github.com/ruhu-ai/open-alvary (owner-selected destination; publication/visibility still to be verified).
@@ -41,7 +41,7 @@ The working v0.1 pilot includes canonical schemas, parser interfaces, policy che
 a database migration, API, public website and reproducible releases. It currently
 catalogues four Nigerian instruments and publishes no Nigerian legal full text;
 all four rights reviews remain pending. The website and software are MIT-licensed.
-Original catalogue metadata licensing is being finalized before public launch.
+Original project-authored catalogue metadata is licensed under CC BY 4.0; linked legal texts are excluded.
 
 Open Alvary is separate from Alvary's proprietary legal-AI application. The commercial
 product can consume the same public interfaces as any other downstream user. No

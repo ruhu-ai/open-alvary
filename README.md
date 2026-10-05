@@ -172,9 +172,8 @@ No seed's legal-text rights have been verified. See [rights policy](docs/rights-
 
 The newly written software is provided under the MIT licence in `LICENSE`.
 That licence **does not apply to legal source text, external publications, source
-permissions or logos**. Data permissions are per record. The pilot does not assign
-a blanket open-data licence to its catalogue or any linked legal text; metadata
-licensing must be settled before public distribution.
+permissions or logos**. Data permissions are per record. Original project-authored catalogue metadata is CC BY 4.0 under
+[DATA-LICENSE.md](DATA-LICENSE.md). This does not license linked legal texts.
 
 ## Application-ready pilot work
 
