@@ -155,17 +155,18 @@ deduplication. PostgreSQL is supported, while SQLite powers the lightweight prev
 Deferred: live source crawling, concrete OCR service, legal section parsers,
 reviewer/admin workflow, append-only rights audit, incremental search indexes,
 embeddings/pgvector, MCP, hosted tiers, signed releases, authentication and per-client quotas,
-production hosting and an operational takedown/contact channel. A shared API traffic
-limit, deployment health checks and production configuration are now provided.
+a persistent full-text deployment and exercised incident/withdrawal operations.
+The metadata site is live on Vercel; contact is ijidai@ruhu.ai. Docker traffic controls
+are available for that alternative profile, not the live Vercel deployment.
 
-## Before public launch
+## Before full-text publication
 
 Appoint rights and content reviewers; verify source-specific redistribution and
 reuse evidence, editorial/database restrictions, privacy, attribution and licence
 compatibility. Verify actual official document versions, consolidations, effective
-dates, repeal relationships and extraction quality. Select a licence for original
-catalogue metadata and agree contribution terms. Establish governance ownership,
-a takedown channel, incident handling, monitoring, backups and controlled publication.
+dates, repeal relationships and extraction quality. Original metadata terms and
+maintainer identity are approved. Complete review appointments, incident exercises,
+monitoring, recovery and controlled full-text publication.
 No seed's legal-text rights have been verified. See [rights policy](docs/rights-policy.md).
 
 ## Licensing
@@ -186,9 +187,10 @@ read from `GET /project` and deployment environment values, never guessed.
 A [fund application draft](docs/application/codex-open-source-fund.md),
 [proposed milestones/budget](docs/application/milestones-and-budget.md) and
 [readiness checklist](docs/application/readiness.md) are prepared for owner review.
-No application has been submitted. The selected GitHub destination is
-`ruhu-ai/open-alvary`; public visibility, hosting, maintainer/contact and the
-original-metadata licence must be verified before launch. Full-text legal clearance
+No application has been submitted. The repository is public at
+`ruhu-ai/open-alvary` and the metadata site is live at https://open.alvary.ai.
+Maintainer/contact and original metadata licensing are approved; operational
+follow-up is recorded in docs/deployment-status.md. Full-text legal clearance
 is not claimed and is not required to demonstrate this metadata-only pilot.
 
 The [v0.1.0 release notes](docs/release-notes-v0.1.0.md) describe the release candidate,
@@ -200,3 +202,11 @@ Follow [the Vercel guide](deployment/vercel.md) to deploy the website and API to
 from the repository root. This target is restricted to the immutable metadata pilot;
 it requires no separate database. Production builds require recorded metadata licence
 approval and configured public identity. Live hosting is not implied by configuration.
+
+## Complete specification
+
+The [canonical specification](docs/specification/README.md) defines the full target:
+data and document classes, review/ingestion, public APIs and website, release operations,
+continental expansion and requirement-level acceptance gates. It explicitly separates
+implemented pilot behaviour from future S1–S4 work. See [deployment status](docs/deployment-status.md)
+for verified live facts. Specification changes do not automatically deploy the website.

@@ -1,7 +1,8 @@
 # Open Alvary v0.1.0 — metadata catalogue pilot
 
-Release candidate. Publication and live deployment must be recorded separately after
-verification; this document does not claim either has happened.
+GitHub release notes draft. The repository and metadata website are now public;
+see deployment-status.md for the deployed revision and verification. A tagged
+GitHub release remains separate from website deployment.
 
 ## What this release provides
 

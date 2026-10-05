@@ -5,11 +5,12 @@
 Canonical contracts, initial relational migration, fail-closed rights gates,
 Nigeria catalogue, modular parser skeleton, small read-only API, public UI,
 versioned sample exports and deterministic tests. Four metadata entries; no
-rights-cleared Nigerian text. This is a local foundation, not a public launch.
+rights-cleared Nigerian text. The metadata pilot is public at https://open.alvary.ai. See deployment-status.md
+for verified facts and [the complete specification](specification/README.md) for stages S0–S4.
 
 ## Next — reviewed content and operations
 
-Appoint reviewers; settle software/data contribution terms and metadata licensing;
+Appoint reviewers; implement the specified review ledger and approval workflow;
 verify actual source licences, privacy, database rights and attribution; verify
 consolidations and historical law. Add a controlled review UI with append-only
 rights history, versioned content review records and audited release approvals.
@@ -31,7 +32,8 @@ with no guarantee of comprehensive continental coverage or a funding award.
 Add authority hierarchies, languages/translations, reviewed amendment links,
 source freshness monitoring and coverage gaps. Add bounded SQL queries,
 PostgreSQL text indexes, streaming releases, signed manifests and operational
-withdrawal notices. Complete production deployment, backups and monitoring.
+withdrawal notices. Complete persistent-corpus deployment and its backup/monitoring gates before full text.
+Vercel metadata hosting is already live; external monitoring remains to be verified.
 
 ## Optional — machine access and hosted services
 

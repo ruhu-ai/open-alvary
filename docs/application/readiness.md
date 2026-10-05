@@ -11,12 +11,12 @@ and actions requiring an owner or host. Do not imply an application was submitte
 | Six-month milestones and $25k credit ceiling | Proposed for review | milestones-and-budget.md |
 | Initial launch specification | Written | ../initial-launch-spec.md |
 | Public contribution/security reporting guidance | Written | CONTRIBUTING.md, SECURITY.md, issue templates |
-| Production deployment composition and runbook | Production containers and recovery tested locally; live hosting pending | ../../deployment/ |
+| Production deployment composition and runbook | Docker tested locally; Vercel metadata site deployed | ../../deployment/ |
 | Website About/contact/privacy and same-origin API examples | Implemented; identity configurable | /#/about, /#/privacy, /#/developers |
-| Public maintainer/contact | Awaiting owner details | PUBLIC_MAINTAINER, PUBLIC_CONTACT_EMAIL |
-| Original metadata licence | Awaiting owner approval | DATA-LICENSE.md; proposed CC BY 4.0 |
-| GitHub repository publication | Private repository created and candidate pushed; public release pending | https://github.com/ruhu-ai/open-alvary |
-| Live hosting/domain/TLS | Awaiting chosen host/access | open.alvary.ai is intended, not deployed |
+| Public maintainer/contact | Approved/configured | Ruhu AI; ijidai@ruhu.ai; mailbox delivery not independently tested |
+| Original metadata licence | Approved | DATA-LICENSE.md; CC BY 4.0 for original metadata only |
+| GitHub repository publication | Public repository verified | https://github.com/ruhu-ai/open-alvary |
+| Live hosting/domain/TLS | Deployed and anonymous HTTPS verified | https://open.alvary.ai; manual Vercel deployments |
 | Monitored contact, alert recipient and off-host backups | Owner/host actions outstanding | deployment/runbook.md |
 | Legal full-text rights clearance | Not complete; outside metadata pilot | All seed rights remain under review |
 | Applicant name/email/collaborators | Awaiting applicant | Do not infer from OS username |
@@ -26,3 +26,5 @@ Repository preparation does not prove public hosting, a monitored mailbox or lic
 authority. Update this checklist only on evidence. A website is not a stated application
 prerequisite; the applicant can choose to apply with a public repository and honest pilot
 status while hosting is still being arranged.
+
+Complete target requirements and stage acceptance: [specification](../specification/README.md).

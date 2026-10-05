@@ -1,7 +1,10 @@
 # Public API v0.1
 
-Base URL locally: `http://127.0.0.1:8018`. The web app proxies `/api/*`. No live
-hosted endpoint is claimed. OpenAPI: `/openapi.json`; interactive docs: `/docs`.
+Production base URL: `https://open.alvary.ai/api`. Local base: `http://127.0.0.1:8018`.
+OpenAPI is at `{base}/openapi.json`; interactive docs at `{base}/docs` may be limited
+by the production CSP and are not the website developer guide. The versioned target
+API is specified in [public interfaces](specification/public-interfaces.md); `/api/v1`
+is future work, not a live route.
 Only GET data routes are exposed. No API key, LLM or commercial subscription is needed.
 
 | GET path | Response |
@@ -11,7 +14,7 @@ Only GET data routes are exposed. No API key, LLM or commercial subscription is 
 | /jurisdictions | Jurisdiction records |
 | /sources | `{total, items}`; metadata, access_mode, has_full_text, rights_status |
 | /sources/{id} | Public source metadata; 404 for missing or restricted |
-| /sources/{id}/versions | `{items, structure, notice}`; only cleared versions |
+| /sources/{id}/versions | `{items, rights, structure, notice}`; only cleared versions |
 | /search?q=... | `{total, items, scope}`; title/citation and cleared-text matching |
 | /citations/{citation} | `{status, matches}`; resolved/ambiguous/unresolved |
 | /coverage | Counts, jurisdiction breakdown and limitations |

@@ -1,3 +1,7 @@
+> Historical pre-deployment verification record. Current public hosting/licence facts
+> are in [deployment-status.md](deployment-status.md); its latest recorded suite passed
+> 54 tests. Pending items below describe the earlier checkpoint, not current launch status.
+
 # Initial launch candidate verification — 2026-10-05
 
 ## Completed locally

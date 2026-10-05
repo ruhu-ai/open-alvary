@@ -1,8 +1,12 @@
 # Architecture
 
+Target architecture and acceptance requirements: [specification/README.md](specification/README.md).
+
 The canonical Pydantic model is the application contract. JSON Schema is generated
 from it; Alembic defines the database layout. PostgreSQL 16 is the intended shared
-store; SQLite offers a small local preview. No LLM is needed for any v0.1 operation.
+store for future persistent corpus operations; the live Vercel metadata pilot uses
+a read-only in-memory SQLite snapshot. It supports no persistent writes or legal text.
+See [deployment status](deployment-status.md) and [Vercel operations](../deployment/vercel.md). No LLM is needed for any v0.1 operation.
 
 The source catalogue contains independently authored bibliographic facts, URLs
 and a current rights record. Operator adapters fetch only explicitly approved URLs.

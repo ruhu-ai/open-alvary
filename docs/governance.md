@@ -14,11 +14,15 @@ Rights and legal-content verification are independent. Keep privileged advice an
 private personal details outside public records. Public records should contain
 an appropriate reviewer identifier and a publishable evidence summary.
 
-Before launch, name accountable owners and publish a working corrections/takedown
-channel. A credible rights or privacy complaint should trigger a publication hold,
+The approved maintainer is Ruhu AI and the public contact is ijidai@ruhu.ai.
+Mailbox delivery/response and incident exercises remain to be verified. A credible rights or privacy complaint should trigger a publication hold,
 review of affected hashes, suspension of old releases, and a documented resolution.
-Database updates to rights invalidate affected release delivery, but external copies
-cannot be recalled. External mirrors need an explicit withdrawal protocol.
+In a persistent deployment, current rights updates invalidate affected release delivery.
+The live Vercel snapshot instead requires redeployment and separate control of older
+deployment URLs. External copies cannot be recalled. External mirrors need an explicit withdrawal protocol.
 
-A software licence is included; catalogue licensing, contribution terms, conflict
-handling and a sustainable funding model remain governance decisions.
+Software/documentation are MIT and original catalogue metadata is CC BY 4.0 under
+DATA-LICENSE.md. Neither grant covers linked legal texts. Conflict handling, appointed
+reviewers and sustainable funding remain operating decisions. Target review authority,
+two-person full-text approval and audit requirements are in
+[review and ingestion](specification/review-and-ingestion.md).

@@ -1,6 +1,7 @@
 # Initial public pilot specification
 
-Version: 0.1 launch candidate. This document governs the application-ready metadata
+Version: 0.1 deployed metadata pilot. The complete target specification is
+[specification/README.md](specification/README.md). This document governs the application-ready metadata
 pilot, not the eventual full African legal corpus. Status labels below distinguish
 implemented behaviour, required operating decisions, and explicitly deferred work.
 
@@ -72,23 +73,22 @@ DATA-LICENSE.md. Public configuration alone is not licence authority.
 
 ## Deployment contract
 
-Production composition separates database, one-shot migration, API, nginx web and
-Caddy HTTPS edge. Only ports 80/443 are public. Database/API are internal. Generate a
-unique password; do not reuse local demo credentials. Runtime API filesystem is read-only,
-capabilities dropped, process concurrency bounded, container memory/log rotation capped.
-nginx restricts methods and applies a shared 20-request/second API budget with burst 40.
-This is a small-service load guard, not a complete abuse/DDoS solution or per-user quota.
+The live pilot runs on Vercel at https://open.alvary.ai, deployed manually with no
+GitHub deployment integration. The API reconstructs a read-only metadata snapshot
+per instance and rejects all text versions/structure nodes. No persistent PostgreSQL
+database, nginx rate limiter, Caddy edge or Docker log rotation operates there.
+Catalogue changes require redeployment; older deployment snapshots require separate
+access control during withdrawals. See [Vercel guide](../deployment/vercel.md).
 
-Caddy obtains TLS after DNS and inbound 80/443 are correctly configured. Hosting-specific
-firewall, uptime monitor, provider logging/retention and backup destination must be
-confirmed by the operator. `/api/healthz` is the monitor target. Alert recipient is the
-named maintainer; no external monitor or alert channel is silently assumed active.
+Docker/PostgreSQL remains an alternative tested deployment profile. Its networking,
+backup and resource controls are documented in deployment/runbook.md; they must not
+be attributed to Vercel. A future text corpus requires shared current publication
+state and the S2 acceptance gates in [the target specification](specification/README.md).
 
-Fonts are bundled; production CSP disallows external scripts, fonts, embedding and
-arbitrary connections. Do not apply this production CSP to Vite development HMR.
-Access logging is disabled; operational logs rotate. No tracking analytics are installed.
-Backup database daily with deployment/backup.sh; encrypt an off-host copy and restore
-a test database before launch. See deployment/runbook.md for rollback and withdrawal.
+Fonts are bundled and production CSP limits external content. Host-specific logging,
+retention, monitoring, traffic/spend controls and recovery must be verified separately.
+The public deployment passed anonymous homepage/API/search/download checks. External
+monitoring and provider retention are not yet verified; see deployment-status.md.
 
 ## Operational responsibilities
 
@@ -109,7 +109,9 @@ No external funding commitments, partnerships or team membership may be invented
 3. Owner chooses public repository destination and publication is verified anonymously.
 4. Maintainer/contact and metadata licence approved; preflight passes with real values.
 5. Deploy to approved host/domain; verify TLS, links, API, download hash and empty text.
-6. Database backup/restore exercise and external monitoring/alert ownership recorded.
+6. Recovery and external monitoring/alert ownership recorded for the actual host.
+   Database backup/restore applies to the persistent deployment, not Vercel snapshots.
+   Unverified operational follow-up remains open in deployment-status.md.
 7. Application copy matches actual status; applicant reviews identity/budget/terms.
 
 The application can be submitted without a deployed website if the applicant chooses;
