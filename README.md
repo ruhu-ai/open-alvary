@@ -194,3 +194,10 @@ is not claimed and is not required to demonstrate this metadata-only pilot.
 
 The [v0.1.0 release notes](docs/release-notes-v0.1.0.md) describe the release candidate,
 its coverage and known limitations.
+
+## Manual Vercel deployment
+
+Follow [the Vercel guide](deployment/vercel.md) to deploy the website and API together
+from the repository root. This target is restricted to the immutable metadata pilot;
+it requires no separate database. Production builds require recorded metadata licence
+approval and configured public identity. Live hosting is not implied by configuration.
