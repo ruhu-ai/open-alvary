@@ -1,0 +1,21 @@
+tests/test_vercel.py
+  s_fcf278cc7d0219::t_cc3ea2d2475bb5 10-13
+api/vercel.py
+  s_fcf278cc7d0219::t_cc3ea2d2475bb5 7-8,10,19,33-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "86a14ad27d5c3a197bddff1390f02e3f0e6c0840",
+  "prompts": {},
+  "sessions": {
+    "s_fcf278cc7d0219": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1097f-afd1-78c2-bf3f-f5e7e95727b5",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
