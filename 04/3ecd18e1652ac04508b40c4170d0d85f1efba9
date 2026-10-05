@@ -1,0 +1,42 @@
+vercel.json
+  s_fcf278cc7d0219::t_40bdd916e517d9 1-4,11-14,31-34,41,46
+  s_fcf278cc7d0219::t_6bfa61a81d5ef1 5-10,15-30,35-40,42-45
+.gitignore
+  s_fcf278cc7d0219::t_40bdd916e517d9 23-26
+  s_fcf278cc7d0219::t_0587ae04d6b795 27
+api/vercel.py
+  s_fcf278cc7d0219::t_40bdd916e517d9 1-33
+web/src/main.tsx
+  s_fcf278cc7d0219::t_40bdd916e517d9 1100-1104
+scripts/check_launch.py
+  s_fcf278cc7d0219::t_40bdd916e517d9 12,22-30
+pyproject.toml
+  s_fcf278cc7d0219::t_40bdd916e517d9 30-32
+.vercelignore
+  s_fcf278cc7d0219::t_40bdd916e517d9 1-17
+tests/test_vercel.py
+  s_fcf278cc7d0219::t_54b8c6437a5bc3 1-40
+README.md
+  s_fcf278cc7d0219::t_bbb2cae1226923 197-203
+scripts/build_vercel.py
+  s_fcf278cc7d0219::t_40bdd916e517d9 1-27
+deployment/vercel.md
+  s_fcf278cc7d0219::t_bbb2cae1226923 1-7,53-74
+  s_fcf278cc7d0219::t_6bfa61a81d5ef1 8-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "043ecd18e1652ac04508b40c4170d0d85f1efba9",
+  "prompts": {},
+  "sessions": {
+    "s_fcf278cc7d0219": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1097f-afd1-78c2-bf3f-f5e7e95727b5",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
