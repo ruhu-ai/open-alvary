@@ -1,0 +1,19 @@
+docs/deployment-status.md
+  s_6c8fbf5a41e5d5::t_430407beffd694 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "38c7cd3fda33ba300583858928f5546ef9e8868e",
+  "prompts": {},
+  "sessions": {
+    "s_6c8fbf5a41e5d5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10400-d3ff-7583-af50-bf51d730043b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
