@@ -1,0 +1,60 @@
+docs/specification/data-contract.md
+  s_fcf278cc7d0219::t_23e4ca8168c616 1-142
+docs/specification/expansion-and-acceptance.md
+  s_fcf278cc7d0219::t_a78205521a11de 1-92
+docs/specification-review.md
+  s_fcf278cc7d0219::t_8ea17d9c85dbb9 1-217
+docs/public-api.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 3-7,17
+docs/specification/review-and-ingestion.md
+  s_fcf278cc7d0219::t_23e4ca8168c616 1-104
+docs/specification/README.md
+  s_fcf278cc7d0219::t_23e4ca8168c616 1-76
+docs/initial-launch-spec.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 3-4,76-81,83-86,88-91,112-114
+docs/release-policy.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 4-7,27,31-33
+docs/roadmap.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 8-9,13,35-36
+docs/application/readiness.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 14,16-19,29-30
+docs/architecture.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 3-4,7-9
+docs/verification.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 1-4
+docs/specification/releases-and-operations.md
+  s_fcf278cc7d0219::t_a78205521a11de 1-105
+docs/specification/public-interfaces.md
+  s_fcf278cc7d0219::t_a78205521a11de 1-121
+docs/governance.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 17-18,20-22,24-28
+README.md
+  s_fcf278cc7d0219::t_954087dc7c3db6 205-212
+  s_7d2c0f57ed320e::t_a660117ceac456 158-160,162,167-169,190-193
+docs/release-notes-v0.1.0.md
+  s_7d2c0f57ed320e::t_9d69e919bbd72e 3-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7bb2f5a824546cd9c09297fede3a41f5f27eef49",
+  "prompts": {},
+  "sessions": {
+    "s_7d2c0f57ed320e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10b6d-52f3-7a83-bdb4-c4adb2ef2aaa",
+        "model": "unknown"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    },
+    "s_fcf278cc7d0219": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1097f-afd1-78c2-bf3f-f5e7e95727b5",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
