@@ -1,0 +1,23 @@
+.github/workflows/ci.yml
+  s_6c8fbf5a41e5d5::t_9b5d5a7ece1d15 2-4
+docs/application/readiness.md
+  s_6c8fbf5a41e5d5::t_33862308e0a979 18
+docs/verification.md
+  s_6c8fbf5a41e5d5::t_efa6d1d811d074 33-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5b3cc515fe664c2060c2a838fd9a3945b16b39ef",
+  "prompts": {},
+  "sessions": {
+    "s_6c8fbf5a41e5d5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10400-d3ff-7583-af50-bf51d730043b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
