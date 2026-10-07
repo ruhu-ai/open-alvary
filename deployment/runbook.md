@@ -50,6 +50,13 @@ with an explicit temporary destination, then run migrations/seed checks and publ
 smoke checks against that test deployment. Record backup timestamp and restore result.
 Do not run the seed smoke check expecting four sources once the corpus has expanded.
 
+The policy foundation currently binds synthetic actors to PostgreSQL role OIDs. A
+database dump does not preserve authenticated subjects or recreate their role OIDs
+on another cluster. Keep capability logins and serving stopped during a foundation
+restore. Identity revalidation, role/grant reprovisioning and current denial-state
+replay need their own implemented and tested workflow before restored policy can
+be activated. A successful seed smoke check does not certify those boundaries.
+
 ## Upgrade and rollback
 
 Record the deployed commit and image IDs. Take and validate a backup before migration.
@@ -72,7 +79,10 @@ downloaded copies cannot be recalled. Publish a suitable correction/withdrawal n
 
 ## Local clean-container verification
 
-`deployment/smoke.yaml` exposes only the web service on 127.0.0.1:5179. Use a disposable
-environment file and project name; start only `web` and its dependencies so Caddy does
-not request a real certificate. This validates the production images and internal
-routing, not live DNS/TLS or an actual hosting provider.
+Run `scripts/container_smoke.sh` from the repository root with the project's Python
+environment on PATH. It generates a disposable environment file and unique Compose
+project, exposes web on an assigned loopback port, verifies the metadata-only pilot,
+then removes that project's containers and volumes. Existing projects are untouched.
+It starts only `web` and its dependencies so Caddy does not request a real certificate.
+This validates the production images and internal routing, not live DNS/TLS or an
+actual hosting provider.
