@@ -1,0 +1,43 @@
+tests/test_postgres.py
+  s_bf7744477d4397::t_4367ba37db19b7 6,23
+  s_bf7744477d4397::t_04d47ab166e8bf 7-8,18-22,24-31,43
+tests/test_postgres_acquisition.py
+  s_bf7744477d4397::t_04d47ab166e8bf 571
+.github/workflows/ci.yml
+  s_bf7744477d4397::t_272b4e37cad6b0 32,34
+  s_bf7744477d4397::t_d35e6f6d218948 45
+tests/test_postgres_identity.py
+  s_bf7744477d4397::t_04d47ab166e8bf 47,83
+tests/test_postgres_policy.py
+  s_bf7744477d4397::t_04d47ab166e8bf 680
+tests/conftest.py
+  s_bf7744477d4397::t_04d47ab166e8bf 7,87-92,94-100,104-108,112
+  s_bf7744477d4397::t_272b4e37cad6b0 1,114-125
+tests/postgres_support.py
+  s_bf7744477d4397::t_04d47ab166e8bf 1-14,16-68,70-75
+  s_bf7744477d4397::t_4367ba37db19b7 15,69
+tests/test_postgres_operators.py
+  s_bf7744477d4397::t_04d47ab166e8bf 512,557
+.github/pull_request_template.md
+  s_bf7744477d4397::t_4537a7032cda6f 13-24
+CONTRIBUTING.md
+  s_bf7744477d4397::t_63cab00c5d60dd 21-29
+scripts/verify_sql_resources.py
+  s_bf7744477d4397::t_27475904a0d637 1-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "39c61f332f112c19f80becdc3ad7d5c6e699cc7c",
+  "prompts": {},
+  "sessions": {
+    "s_bf7744477d4397": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a115c6-96a6-7d92-98fc-051375fcf2b9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
