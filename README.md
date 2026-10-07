@@ -63,7 +63,6 @@ releases/2026-10-05/ng/
 web/                 React + TypeScript + Vite public website
 scripts/             seed, schema generation, database verification
 tests/              policy, leakage, provenance, parser and release tests
-docs/                architecture, governance, policies, API, roadmap
 .github/workflows/   tests, schema drift, PostgreSQL migration and web build
 ```
 
@@ -122,7 +121,7 @@ All public operations are GET:
 - `/releases/{date}/{jurisdiction}/{mode}/{filename}` (allowlisted artifacts)
 
 Source lists and search accept `jurisdiction`, `limit` (maximum 100), and `offset`.
-See [public API](docs/public-api.md) and the generated `/openapi.json`.
+Use the generated `/openapi.json` for the deployed API contract.
 
 ## Releases and verification
 
@@ -167,7 +166,7 @@ compatibility. Verify actual official document versions, consolidations, effecti
 dates, repeal relationships and extraction quality. Original metadata terms and
 maintainer identity are approved. Complete review appointments, incident exercises,
 monitoring, recovery and controlled full-text publication.
-No seed's legal-text rights have been verified. See [rights policy](docs/rights-policy.md).
+No seed's legal-text rights have been verified. Legal texts require documented source-specific permission and review before release.
 
 ## Licensing
 
@@ -176,25 +175,11 @@ That licence **does not apply to legal source text, external publications, sourc
 permissions or logos**. Data permissions are per record. Original project-authored catalogue metadata is CC BY 4.0 under
 [DATA-LICENSE.md](DATA-LICENSE.md). This does not license linked legal texts.
 
-## Application-ready pilot work
+## Pilot status
 
-The [initial launch specification](docs/initial-launch-spec.md) defines the first
-public pilot and its acceptance gates. The [deployment runbook](deployment/runbook.md)
-covers HTTPS, generated secrets, health checks, traffic limits, backup/restore and
-withdrawal. The website adds About/contribute and Privacy pages; public identity is
-read from `GET /project` and deployment environment values, never guessed.
-
-A [fund application draft](docs/application/codex-open-source-fund.md),
-[proposed milestones/budget](docs/application/milestones-and-budget.md) and
-[readiness checklist](docs/application/readiness.md) are prepared for owner review.
-No application has been submitted. The repository is public at
-`ruhu-ai/open-alvary` and the metadata site is live at https://open.alvary.ai.
-Maintainer/contact and original metadata licensing are approved; operational
-follow-up is recorded in docs/deployment-status.md. Full-text legal clearance
-is not claimed and is not required to demonstrate this metadata-only pilot.
-
-The [v0.1.0 release notes](docs/release-notes-v0.1.0.md) describe the release candidate,
-its coverage and known limitations.
+The public metadata site is https://open.alvary.ai. Full-text legal clearance is not
+claimed. The [deployment runbook](deployment/runbook.md) covers deployment and operational
+checks. Funding has not been awarded; planned capabilities are not deployed features.
 
 ## Manual Vercel deployment
 
@@ -203,10 +188,8 @@ from the repository root. This target is restricted to the immutable metadata pi
 it requires no separate database. Production builds require recorded metadata licence
 approval and configured public identity. Live hosting is not implied by configuration.
 
-## Complete specification
+## Repository scope
 
-The [canonical specification](docs/specification/README.md) defines the full target:
-data and document classes, review/ingestion, public APIs and website, release operations,
-continental expansion and requirement-level acceptance gates. It explicitly separates
-implemented pilot behaviour from future S1–S4 work. See [deployment status](docs/deployment-status.md)
-for verified live facts. Specification changes do not automatically deploy the website.
+This public repository contains the pilot implementation, public setup instructions,
+licences and deployment guides. Internal design/specification documents and their
+planning-only validation tools are maintained locally and excluded from public commits.
