@@ -1,0 +1,295 @@
+rights/sql/v0011/bound_identity_immutable.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-15
+pyproject.toml
+  s_bf7744477d4397::t_04d47ab166e8bf 29
+  s_bf7744477d4397::t_8a3907a6e4ef5f 22-23
+rights/sql/v0011/hold_stale_approval_m33.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-29
+rights/sql/v0011/is_native_operator.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-8
+rights/sql/v0011/apply_assembly_command_m33.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-179
+rights/sql/v0011/canonical_inputs.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-33
+rights/authority.py
+  s_bf7744477d4397::t_272b4e37cad6b0 1-29,32,34,36,38
+  s_bf7744477d4397::t_0eac35d7779dad 30-31
+  s_bf7744477d4397::t_a1f90dbbc2ccbd 33
+  s_bf7744477d4397::t_c3de7423a57cb0 35
+  s_bf7744477d4397::t_ffe3b065e40648 37
+rights/sql/v0011/approval_policy_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-19
+rights/sql/v0011/assembly_local_key.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-9
+rights/sql/v0011/approval_structure_scope.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-63
+rights/sql/v0011/approval_structure.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-12
+rights/sql/v0011/gazette_dependencies_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-9
+rights/sql/v0011/approval_lifecycle.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-15
+rights/sql/v0011/lifecycle_transition_allowed.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-10
+rights/capabilities.py
+  s_bf7744477d4397::t_16baa1ff50f197 1-40
+rights/sql/provision/v0010.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-7
+rights/sql/v0011/approved_version_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-8
+rights/sql/v0011/erase_staged.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-24
+rights/sql/v0011/assembly_input_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-11
+rights/sql/v0011/apply_assembly_command.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-183
+rights/sql/v0011/apply_synthetic_approval.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-172
+rights/sql/v0011/bound_identity_immutable_m33.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-15
+rights/database.py
+  s_bf7744477d4397::t_16baa1ff50f197 36-37,39-40,43-48,58-62,65-66
+rights/sql/provision/v0005.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-7
+rights/sql/provision/manifest.json
+  s_bf7744477d4397::t_88024f9dd29658 142
+  s_bf7744477d4397::t_16baa1ff50f197 1-141,143-148
+rights/sql/provision/v0007.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-12
+rights/sql/v0011/manifest.json
+  s_bf7744477d4397::t_6544e5f47404ee 8,16,24,32,40,48,56,64,72,80,88,96,104,112,120,128,136,144,152,160,168,176,184,192,200,208,216,224,232,240,248,256,264,272,280,288,296,304,312,320,328,336,344,352,360,368,376,384,392,400,408,416,424,432,440,448,456,464,472,480,488,496,504,512,520,528,536,544,552,560,568,576,584,592,600,608,616,624,632,640,648,656,664,672,680,688-689,697,705,713,721,729,737,745,753,761,769,777,785,793,801,809,817,825,833,841,849,857,865,873,881,889
+  s_bf7744477d4397::t_39b5c3e00786f5 9-11,17-19,25-27,33-35,41-43,49-51,57-59,65-67,73-75,81-83,89-91,97-99,105-107,113-115,121-123,129-131,137-139,145-147,153-155,161-163,169-171,177-179,185-187,193-195,201-203,209-211,217-219,225-227,233-235,241-243,249-251,257-259,265-267,273-275,281-283,289-291,297-299,305-307,313-315,321-323,329-331,337-339,345-347,353-355,361-363,369-371,377-379,385-387,393-395,401-403,409-411,417-419,425-427,433-435,441-443,449-451,457-459,465-467,473-475,481-483,489-491,497-499,505-507,513-515,521-523,529-531,537-539,545-547,553-555,561-563,569-571,577-579,585-587,593-595,601-603,609-611,617-619,625-627,633-635,641-643,649-651,657-659,665-667,673-675,681-683,690-692,698-700,706-708,714-716,722-724,730-732,738-740,746-748,754-756,762-764,770-772,778-780,786-788,794-796,802-804,810-812,818-820,826-828,834-836,842-844,850-852,858-860,866-868,874-876,882-884,890-892
+  s_bf7744477d4397::t_16628f21b96767 909-911
+  s_bf7744477d4397::t_c19e3514a0982e 1-7,12-15,20-23,28-31,36-39,44-47,52-55,60-63,68-71,76-79,84-87,92-95,100-103,108-111,116-119,124-127,132-135,140-143,148-151,156-159,164-167,172-175,180-183,188-191,196-199,204-207,212-215,220-223,228-231,236-239,244-247,252-255,260-263,268-271,276-279,284-287,292-295,300-303,308-311,316-319,324-327,332-335,340-343,348-351,356-359,364-367,372-375,380-383,388-391,396-399,404-407,412-415,420-423,428-431,436-439,444-447,452-455,460-463,468-471,476-479,484-487,492-495,500-503,508-511,516-519,524-527,532-535,540-543,548-551,556-559,564-567,572-575,580-583,588-591,596-599,604-607,612-615,620-623,628-631,636-639,644-647,652-655,660-663,668-671,676-679,684-687,693-696,701-704,709-712,717-720,725-728,733-736,741-744,749-752,757-760,765-768,773-776,781-784,789-792,797-800,805-808,813-816,821-824,829-832,837-840,845-848,853-856,861-864,869-872,877-880,885-888,893-908,912
+rights/sql/provision/v0009.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-18
+rights/sql/provision/v0003.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-30
+rights/sql/v0011/apply_operator_command.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-107
+rights/sql/v0011/collection_permission.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-33
+rights/sql_resources.py
+  s_bf7744477d4397::t_6544e5f47404ee 1-9,11-24,26-38,40-78,85,88-94,98-100,104-106,108-110,118-120
+  s_bf7744477d4397::t_16628f21b96767 25,39,79-84,86
+  s_bf7744477d4397::t_39b5c3e00786f5 95-97,101-103,107,111-117,124-137
+  s_bf7744477d4397::t_6c4ec65b16d89a 121-123
+  s_bf7744477d4397::t_272b4e37cad6b0 10,87
+rights/sql/v0011/apply_assembly_command_m32.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-174
+rights/sql/v0011/assigned.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-9
+rights/sql/provision/v0006.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-2
+rights/sql/v0011/hold_stale_approval.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-29
+migrations/versions/0011_sql_resources.py
+  s_bf7744477d4397::t_39b5c3e00786f5 12
+  s_bf7744477d4397::t_6544e5f47404ee 1-11,13-27
+rights/sql/provision/v0008.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-4
+rights/sql/v0011/current_actor.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-15
+rights/sql/v0011/gazette_binding_hash.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-8
+rights/sql/v0011/assembly_payload_valid.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-49
+rights/sql/v0011/gazette_identity_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-10
+rights/sql/v0011/lock_approval_inputs.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-32
+rights/sql/v0011/apply_synthetic_approval_m33.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-172
+rights/sql/v0011/gazette_inputs.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-22
+rights/sql/v0011/immutable_record.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-7
+rights/sql/v0011/approval_leaf.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-18
+rights/sql/v0011/hold_stale_gazette.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-25
+rights/sql/v0011/apply_gazette_command.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-87
+rights/sql/v0011/approved_version_current_m33.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-12
+rights/sql/v0011/apply_acquisition_command.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-101
+rights/sql/v0011/apply_assembly_command_m31.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-172
+rights/sql/v0011/binding_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-11
+rights/sql/v0011/hold_stale_canonical.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-20
+rights/sql/v0011/lock_acquisition_authority.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-19
+rights/sql/v0011/gazette_correspondence_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-14
+rights/sql/provision/v0004.sql
+  s_bf7744477d4397::t_16baa1ff50f197 1-4
+rights/sql/v0011/acquisition_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-17
+rights/sql/v0011/gazette_item_policy_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-8
+rights/sql/v0011/approval_source.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-24
+rights/sql/v0011/canonical_current.sql
+  s_bf7744477d4397::t_931dc863f2ba0d 1-13
+schema/operator.py
+  s_bf7744477d4397::t_e456b4338971e3 11-12,68
+schema/policy.py
+  s_bf7744477d4397::t_58b8cb485b85b5 10,109
+schema/vocabularies.py
+  s_bf7744477d4397::t_67484069c6b103 1-11
+schema/vocabularies/v1.json
+  s_bf7744477d4397::t_f72fddf5c5358b 1-23
+rights/sql/v0011/lock_assembly_input.sql
+  s_bf7744477d4397::t_5164a0306c8b2d 1-26
+rights/sql/v0011/lock_collection.sql
+  s_bf7744477d4397::t_fbc2a7bed6ce69 1-18
+rights/sql/v0011/lock_gazette_dependencies.sql
+  s_bf7744477d4397::t_983c290c38d085 1-16
+rights/sql/v0011/lock_synthetic_approval_policy.sql
+  s_bf7744477d4397::t_950897eed2febf 1-12
+rights/sql/v0011/metadata_allowed.sql
+  s_bf7744477d4397::t_97717c8d7a5610 1-6
+rights/sql/v0011/oa_block.sql
+  s_bf7744477d4397::t_9ee84f8dd11e51 1-77
+rights/sql/v0011/oa_compile.sql
+  s_bf7744477d4397::t_b57bf42834eccb 1-33
+rights/sql/v0011/oa_leaf.sql
+  s_bf7744477d4397::t_4224d8f2d5050d 1-25
+rights/sql/v0011/oa_norm.sql
+  s_bf7744477d4397::t_033775eb20c759 1-8
+rights/sql/v0011/oa_scope.sql
+  s_bf7744477d4397::t_2054bca9ba3a04 1-85
+rights/sql/v0011/oa_separator.sql
+  s_bf7744477d4397::t_4b306719c632de 1-13
+rights/sql/v0011/oa_shape.sql
+  s_bf7744477d4397::t_3faf451e195d5d 1-14
+rights/sql/v0011/operator_keys.sql
+  s_bf7744477d4397::t_8cfc6c038d8eef 1-11
+rights/sql/v0011/operator_role_safe.sql
+  s_bf7744477d4397::t_647817c4ad69a8 1-24
+rights/sql/v0011/prior_store_canonical_proposal.sql
+  s_bf7744477d4397::t_e0df4315b5fe19 1-40
+rights/sql/v0011/privacy_current.sql
+  s_bf7744477d4397::t_52d46f3a092aae 1-19
+rights/sql/v0011/private_operation_allowed.sql
+  s_bf7744477d4397::t_2735a75732ac94 1-19
+rights/sql/v0011/read_approved_synthetic_version.sql
+  s_bf7744477d4397::t_bbac0d18866525 1-21
+rights/sql/v0011/read_approved_synthetic_version_m33.sql
+  s_bf7744477d4397::t_9c874a858d7986 1-20
+rights/sql/v0011/read_candidates.sql
+  s_bf7744477d4397::t_55337f833deab2 1-22
+rights/sql/v0011/read_canonical_proposal.sql
+  s_bf7744477d4397::t_73e38cee4fa0ea 1-18
+rights/sql/v0011/read_gazette_projection.sql
+  s_bf7744477d4397::t_90bf167b94f24d 1-20
+rights/sql/v0011/read_snapshot.sql
+  s_bf7744477d4397::t_65636641bb77e4 1-17
+rights/sql/v0011/read_synthetic_artifact.sql
+  s_bf7744477d4397::t_1827688c25d806 1-23
+rights/sql/v0011/reconcile_staging.sql
+  s_bf7744477d4397::t_f9edc3bd25e930 1-77
+rights/sql/v0011/record_material.sql
+  s_bf7744477d4397::t_8d79a5f2d7712d 1-21
+rights/sql/v0011/record_operator_assignment.sql
+  s_bf7744477d4397::t_81a65549f5cb22 1-22
+rights/sql/v0011/record_operator_binding.sql
+  s_bf7744477d4397::t_63a59d79e1f3cd 1-22
+rights/sql/v0011/record_revision.sql
+  s_bf7744477d4397::t_86069834069121 1-36
+rights/sql/v0011/record_staging_transition.sql
+  s_bf7744477d4397::t_de04a408d2f131 1-27
+rights/sql/v0011/reserve_assembly_capacity.sql
+  s_bf7744477d4397::t_ccb70bb047c521 1-23
+rights/sql/v0011/reserve_assembly_capacity_m31.sql
+  s_bf7744477d4397::t_313a44bd2efc4d 1-15
+rights/sql/v0011/reserve_assembly_capacity_m32.sql
+  s_bf7744477d4397::t_02d25b6e8f26cb 1-16
+rights/sql/v0011/reserve_assembly_capacity_m33.sql
+  s_bf7744477d4397::t_ebaa033d66ebb2 1-20
+rights/sql/v0011/review_permission.sql
+  s_bf7744477d4397::t_b251b5dce8aa4c 1-9
+rights/sql/v0011/stage_synthetic_artifact.sql
+  s_bf7744477d4397::t_9837690467ca03 1-35
+rights/sql/v0011/staging_allowed.sql
+  s_bf7744477d4397::t_cdc3a2609b8da6 1-10
+rights/sql/v0011/staging_live_bytes.sql
+  s_bf7744477d4397::t_b0b171d893b84c 1-18
+rights/sql/v0011/staging_live_bytes_m31.sql
+  s_bf7744477d4397::t_993e00baac59e0 1-10
+rights/sql/v0011/staging_live_bytes_m32.sql
+  s_bf7744477d4397::t_4f42c0e947d807 1-11
+rights/sql/v0011/staging_live_bytes_m33.sql
+  s_bf7744477d4397::t_78ca1b71458bae 1-15
+rights/sql/v0011/store_canonical_proposal.sql
+  s_bf7744477d4397::t_4971f27ca9588b 1-40
+rights/sql/v0011/sync_assembly_parent.sql
+  s_bf7744477d4397::t_e22649d53bb19e 1-12
+rights/sql/v0011/synthetic_binding_hash.sql
+  s_bf7744477d4397::t_85cca2c259d2b7 1-8
+rights/sql/v0011/transition_assembly.sql
+  s_bf7744477d4397::t_0d31b67f5d3feb 1-44
+rights/sql/v0011/transition_assembly_m31.sql
+  s_bf7744477d4397::t_4d769a25025f00 1-27
+rights/sql/v0011/transition_assembly_m32.sql
+  s_bf7744477d4397::t_c6f672861dc1b6 1-30
+rights/sql/v0011/transition_assembly_m33.sql
+  s_bf7744477d4397::t_185e37e281cebf 1-38
+rights/sql/v0011/validate_approval_commit.sql
+  s_bf7744477d4397::t_287dbcfbbef0bd 1-26
+rights/sql/v0011/validate_approval_commit_m33.sql
+  s_bf7744477d4397::t_05512b6f73c080 1-26
+rights/sql/v0011/validate_approved_cell.sql
+  s_bf7744477d4397::t_6870e1be35782b 1-14
+rights/sql/v0011/validate_approved_grid.sql
+  s_bf7744477d4397::t_9077224c36b884 1-11
+rights/sql/v0011/validate_approved_span.sql
+  s_bf7744477d4397::t_1cda2fdf97927b 1-31
+rights/sql/v0011/validate_approved_tree.sql
+  s_bf7744477d4397::t_823e6e28f014b6 1-16
+rights/sql/v0011/validate_assembly_update.sql
+  s_bf7744477d4397::t_7d8122963d8f99 1-16
+rights/sql/v0011/validate_canonical_update.sql
+  s_bf7744477d4397::t_921c79cca3586d 1-16
+rights/sql/v0011/validate_gazette_binding.sql
+  s_bf7744477d4397::t_4a956b1783f7ff 1-41
+rights/sql/v0011/validate_gazette_commit.sql
+  s_bf7744477d4397::t_b067a5162815d5 1-22
+rights/sql/v0011/validate_gazette_correspondence.sql
+  s_bf7744477d4397::t_20f2e8db9ddb97 1-16
+rights/sql/v0011/validate_node_alignment.sql
+  s_bf7744477d4397::t_126aef11345e16 1-16
+rights/sql/v0011/validate_snapshot_head.sql
+  s_bf7744477d4397::t_1652c89fc2fa21 1-11
+rights/sql/v0011/validate_staging.sql
+  s_bf7744477d4397::t_22eb9d489c766c 1-32
+rights/sql/v0011/validate_staging_m22.sql
+  s_bf7744477d4397::t_c12684496cffff 1-30
+rights/sql/v0011/validate_synthetic_binding.sql
+  s_bf7744477d4397::t_14c97b16d6094a 1-23
+rights/sql/v0011/validate_synthetic_staging.sql
+  s_bf7744477d4397::t_96fe3bcf60e244 1-46
+rights/sql/v0011/validate_synthetic_staging_m22.sql
+  s_bf7744477d4397::t_267486fe9cd941 1-44
+rights/sql/v0011/validate_synthetic_staging_m23.sql
+  s_bf7744477d4397::t_1d276c4342be27 1-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8c210fc6221916522474529f08ba2c2d7d7106db",
+  "prompts": {},
+  "sessions": {
+    "s_bf7744477d4397": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a115c6-96a6-7d92-98fc-051375fcf2b9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
