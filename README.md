@@ -147,8 +147,48 @@ expiry or explicit actor revocation. Assignment additions/removals are audited a
 coordinate through the same actor lock; scope removal denies subsequent command retries.
 No command approves a text version, performs
 acquisition, switches serving authority or enables public text. Real appointment,
-authentication/TLS/session policy, reviewer qualification, restore rebinding and subsequent
-acquisition/privacy commands require separate evidence and implementation.
+authentication/TLS/session policy, reviewer qualification, restore rebinding and real
+acquisition activation require separate evidence and implementation.
+
+Migration `0005` and private `operator-command-2` extend the synthetic CLI with
+`record_controller`, `record_privacy_review` and `record_acquisition_assessment`.
+Controller identity/contact records, purpose-specific privacy clearance and acquisition
+vectors append through native rights-reviewer sessions, with exact evidence/controller/
+privacy revisions and the same atomic audit/receipt semantics. Positive approvals reject
+stale, expired, rejected or mismatched required authority; rejection/denial records can
+close authority without pretending an obsolete controller is current. Real controller
+identity, legal/privacy assessment and qualified appointments remain production gates.
+
+`rights.acquisition.SyntheticAcquisition` provides caller-owned stage/read/erase operations
+for original local synthetic bytes. It performs no fetch, observation, job or parser.
+Native staging pins the assessment's exact SHA-256 and purpose, records the acquiring
+actor, and never retargets existing lineage. Class-level assessments without a known
+hash can be recorded, but cannot authorize this synthetic byte writer. Private retain/
+derive reads check current assessment/privacy/controller state and operation permission
+before loading bytes. Unknown operations and external processing remain unavailable.
+Supersession hides dependent rows immediately; expired or erased bytes cannot be restored
+by a retry. Fresh reassessment may create a new explicitly qualified synthetic artifact;
+it does not reopen an older lineage. Automatic hold materialization/job resumption and
+backup/derived-copy erasure remain future work.
+
+Before native staging, maintenance explicitly calls `declare_synthetic_staging_limit`
+with a collection, byte limit, evidence and reason. Nothing is declared at startup or
+backfilled. The supported profile is `synthetic_public_min`, at most 100 MiB per declared
+collection and 10 MiB per artifact. Database locking serializes concurrent allocations;
+all physically retained bytes consume capacity until scoped audited erasure, including
+expired/hidden rows. This is a synthetic implementation of the initial public-collection
+bound, not a capacity decision for partner feeds or production. Serving/review roles
+cannot access the staging interface. Safe acquisition failures and savepoints preserve
+caller rollback without rendering private bytes or database parameters.
+
+Old staging/assessment records retain null qualification/hash fields and their existing
+fixture compatibility; native readers cannot silently adopt them. Migration `0005`
+validates existing guard boundaries and refuses a destructive downgrade once new review
+receipts, qualified records or capacity declarations exist. Empty isolated rollback
+restores the earlier grants/policy functions. Applied migrations `0001`–`0004` are
+unchanged. Production role adoption, network egress, observation authority, retention
+automation and restore/denial-journal gates remain unimplemented; public serving stays
+on the legacy metadata pilot.
 
 Catalogue HTTP handlers delegate to `api.catalogue` services and transaction-scoped
 repositories in `api.repositories`. Source lists apply metadata permission before SQL
