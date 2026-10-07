@@ -1,0 +1,35 @@
+SECURITY.md
+  s_fcf278cc7d0219::t_d39b53bd19b96a 4
+.dockerignore
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 19-26
+README.md
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 124,169,178,180-182,191,193-195
+.vercelignore
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 18-25
+web/src/main.tsx
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 1067,1071
+.github/workflows/ci.yml
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 33,35-38
+  s_fcf278cc7d0219::t_094ca00ae36ccf 21-22,34,39
+.gitignore
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 28-35
+CONTRIBUTING.md
+  s_fcf278cc7d0219::t_ec6fd94eab9d8f 3-5
+  s_fcf278cc7d0219::t_d39b53bd19b96a 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "509bc34dd63a4a9417011859d27f2eb331eb76f0",
+  "prompts": {},
+  "sessions": {
+    "s_fcf278cc7d0219": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1097f-afd1-78c2-bf3f-f5e7e95727b5",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
