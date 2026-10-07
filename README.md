@@ -101,6 +101,55 @@ functions/view, never private tables, and has no schema CREATE after provisionin
 groups cannot assume it. Nonempty policy foundations require forward repair; downgrade
 will not discard decisions or evidence. Measure migration/lock costs before real use.
 
+Migration `0004` adds a private operator command foundation. Its current appointments
+are **synthetic only**: it supports development of individual native PostgreSQL login
+sessions, not a production identity provider or appointment of qualified reviewers.
+An administrator explicitly calls `rights.operators.register_operator` with an existing
+nonprivileged LOGIN, a `SyntheticAppointment` containing a stable private issuer/subject,
+finite expiry and evidence, and collection/capability assignments. It creates no password
+or login and does not commit. One issuer/subject can bind only one actor; role OID and
+name are pinned, so renaming/recreating a login cannot inherit an old appointment.
+Inherited privilege, schema CREATE, object ownership and legacy writes reject the
+runtime role profile. Old NOLOGIN subjects remain synthetic PG fixtures and cannot
+use the command CLI. Existing role provisioning is upgraded explicitly by the migration;
+fresh capability provisioning recognizes the new command function.
+
+Supply an individually authenticated `ALVARY_OPERATOR_DATABASE_URL` using your local
+secret configuration, then run `python -m rights.cli < private-command.json` (or the
+installed `alvary-operator` command). The CLI requires PostgreSQL, uses one bounded
+transaction/connection, and reads at most 64 KiB from stdin. It prints only command ID,
+safe status, resulting revision and replay flag; it never prints input, credentials,
+private evidence or database exception details. No HTTP write route is added.
+The private `schema/operator.schema.json` contract defines these actions:
+
+- `record_evidence`: append a scoped private reference, digest and observation time.
+- `record_collection_decision`: append a rights revision with explicit operation vector,
+  evidence, validity, privacy classification and reason.
+- `record_verification_review`: append a content revision and all six required material
+  coverage records together, including sampling, competence evidence and escalation/exclusion.
+
+Each envelope contains `command_id`, `action`, `collection_id`, `expected_revision`,
+`reason` and its typed `payload`. It accepts no actor, role or privilege fields.
+The database derives the actor from the session and atomically records the mutation,
+audit and immutable retry receipt. An identical retry by that actor returns the original
+revision; changed intent or a stale revision returns conflict, and another actor cannot
+claim the receipt. Repository methods use savepoints and leave the outer transaction
+to their caller. A rollback removes the receipt as well as the decision/evidence.
+
+Appointment/credential expiry, revocation, role-name change or unsafe privilege changes
+deny subsequent commands, including retries on an established connection. Revocation
+waits for an active command's transaction and records its own private maintenance event.
+These shadow commands also hold the legacy authority fence: frozen/rehearsal phases deny
+them. Rights and content use their own sessions/assignments; release preflight still
+requires two distinct reviewers. Holding both roles cannot satisfy independent review.
+Session expiry closes new writes; earlier review records retain their own validity until
+expiry or explicit actor revocation. Assignment additions/removals are audited and
+coordinate through the same actor lock; scope removal denies subsequent command retries.
+No command approves a text version, performs
+acquisition, switches serving authority or enables public text. Real appointment,
+authentication/TLS/session policy, reviewer qualification, restore rebinding and subsequent
+acquisition/privacy commands require separate evidence and implementation.
+
 Catalogue HTTP handlers delegate to `api.catalogue` services and transaction-scoped
 repositories in `api.repositories`. Source lists apply metadata permission before SQL
 pagination; single-source reads use bounded lookups. Search and coverage scan permitted
