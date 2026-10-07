@@ -427,8 +427,8 @@ complete migration compatibility, backups or publication readiness.
 
 Migration `0007` provides private original-synthetic candidate and snapshot proposals through
 `rights.assembly.SyntheticAssembly` and `alvary-operator --assembly`. The separate
-`schema/assembly.schema.json` contract (`assembly-proposal-1`) defines `record_synthetic_run`,
-`record_snapshot` and `reconcile_assembly`. Existing review and raw-lifecycle commands keep their
+`schema/assembly.schema.json` contract (`assembly-proposal-2`) defines `record_synthetic_run`,
+`record_snapshot`, `record_canonical_proposal` and `reconcile_assembly`. Existing review and raw-lifecycle commands keep their
 contracts. The CLI uses the same explicit native PostgreSQL credentials, input and time bounds;
 its responses contain IDs, hashes, revisions or counts, without proposal text or credentials.
 
@@ -467,3 +467,25 @@ held/erased proposals never resume automatically. Immutable private lineage, has
 and audit metadata remain. PostgreSQL history/WAL/backup and independently retained copies are
 outside this row-erasure boundary. Empty isolated `0007` rollback restores the exact `0006`
 validator and raw state; populated proposal or receipt history requires forward repair.
+
+Migration `0008` adds bounded private OA-text-1 assembly from an exact current synthetic snapshot.
+`record_canonical_proposal` accepts a structural plan referencing selected candidates; independent
+Python and PostgreSQL serializers must agree on UTF-8 bytes and projection metadata before storage.
+They apply NFC and LF normalization, preserve literal whitespace, controls and hyphenation, and
+record candidate spans, normalization hashes and deliberate separator offsets. Tables preserve
+row-major positions, merged origins and empty cells; unavailable positions remain explicitly
+incomplete. Explicit furniture and matching repeated-header exclusions account for omitted leaves.
+Notice containers retain private byte ranges; footnotes follow first-marker order within their
+scope, followed by unreferenced notes in snapshot order. No words or physical geometry are supplied
+by the assembler. These mechanics do not establish source accuracy or legal approval.
+
+Each proposal binds the snapshot revision/hash and fixed serialization profile/hash. Native
+content and acquisition assignments plus current derive/retain authority are required to write;
+private reads recheck current input and snapshot head. Snapshot edits hide old output immediately;
+reconciliation can materialize conservative holds. Output is limited to 128 KiB and stored plan/
+projection metadata to 256 KiB, within the existing shared collection and 2 MiB artifact budget.
+Canonical records also count toward the 128-record artifact limit. Parent and derivative cleanup
+now clears canonical bytes and metadata atomically while retaining private hashes and audit history.
+Empty isolated `0008` rollback restores exact `0007` helpers; populated canonical history requires
+forward repair. Public versions, anchors, text routes and atomic independent approval remain future
+work; all canonical projections carry `publication_eligible=false`.
