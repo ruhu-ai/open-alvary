@@ -101,6 +101,25 @@ functions/view, never private tables, and has no schema CREATE after provisionin
 groups cannot assume it. Nonempty policy foundations require forward repair; downgrade
 will not discard decisions or evidence. Measure migration/lock costs before real use.
 
+Catalogue HTTP handlers delegate to `api.catalogue` services and transaction-scoped
+repositories in `api.repositories`. Source lists apply metadata permission before SQL
+pagination; single-source reads use bounded lookups. Search and coverage scan permitted
+metadata in 100-row windows, preserving the pilot substring-search contract without
+loading a private whole corpus. Policy headers are checked before approved canonical
+bytes are selected. The wire DTOs are deeply immutable and published in
+`schema/public.schema.json` (`pilot-public-1`, serialization schema); JSON fields and
+existing source URLs remain compatible. Target metadata paging uses only the eligible
+view through `PolicyRepository`/`TargetCatalogue` and is not wired to pilot HTTP or cutover.
+
+The HTTP dependency owns read-transaction lifetime; services/repositories never commit.
+Corrupt/unavailable authority returns a safe 503, with no snapshot fallback or raw error
+details. Legacy unpaged results have development safety bounds of 1,000 records and
+10 MiB canonical text; oversized results return 413 without partial text. These are
+prototype compatibility guards, not approved production capacity, transport-byte quotas,
+or S2 launch evidence. Versioned pagination, lexical indexes and final emission checks
+remain separate work. `api.release_adapter` isolates the existing filesystem/integrity
+verifier; its whole-corpus validation remains until the release/publication slice.
+
 Alternatively, `docker compose up --build` starts PostgreSQL 16, the API and the
 built web app on the same ports. Stop native preview processes first. Compose
 credentials are for local development only. The database has no published port.
