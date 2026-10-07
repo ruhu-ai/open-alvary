@@ -168,8 +168,8 @@ derive reads check current assessment/privacy/controller state and operation per
 before loading bytes. Unknown operations and external processing remain unavailable.
 Supersession hides dependent rows immediately; expired or erased bytes cannot be restored
 by a retry. Fresh reassessment may create a new explicitly qualified synthetic artifact;
-it does not reopen an older lineage. Automatic hold materialization/job resumption and
-backup/derived-copy erasure remain future work.
+it does not reopen an older lineage. Job resumption and backup/derived-copy erasure
+remain future work.
 
 Before native staging, maintenance explicitly calls `declare_synthetic_staging_limit`
 with a collection, byte limit, evidence and reason. Nothing is declared at startup or
@@ -189,6 +189,37 @@ restores the earlier grants/policy functions. Applied migrations `0001`–`0004`
 unchanged. Production role adoption, network egress, observation authority, retention
 automation and restore/denial-journal gates remain unimplemented; public serving stays
 on the legacy metadata pilot.
+
+Migration `0006` adds operator-run private lifecycle reconciliation. Submit one
+`operator-command-3` lifecycle request to `alvary-operator --reconcile-staging`
+(or `python -m rights.cli --reconcile-staging`) using the same explicit PostgreSQL
+operator URL and native acquisition assignment. Required inputs are `command_id`,
+`collection_id` and `reason`; optional `limit` is 1–100 (default 50), `after` is a UUID
+cursor, and `erase_due` is a Boolean (default false). The collection must have an
+explicit synthetic staging declaration. Responses contain only status, bounded counts
+and `next_after`; no private content, evidence or controller contacts are returned.
+
+`rights.lifecycle.AcquisitionLifecycle.reconcile` uses a caller-owned transaction.
+Supersession, expiry and unavailable current authority materialize a hold. Privacy
+rejection (including intervening rejected revisions) or a due artifact deadline
+materializes `erasure_required`; `erase_due=true` also removes the bytes from the raw artifact row
+with an erasure audit. Existing holds never resume automatically, deadlines never
+extend, and assessment/purpose/hash lineage never retargets. There is no reviewed
+restricted lawful-hold override, derived/index/backup deletion, scheduler or fetcher.
+Conservative holds and erasure remain permitted while legacy writes are fenced.
+
+Follow `next_after` with a fresh command ID; restart from a null cursor on a later
+pass to catch changes or inserts before an earlier cursor. A pass is bounded traversal,
+not a snapshot of a changing collection. Identical requests from the same currently
+authorized actor replay their historical counts/cursor; changed requests conflict.
+Lifecycle IDs have their own receipt namespace, separate from review command IDs.
+States, append-only lineage events, audits and the receipt commit or roll back together;
+a failed batch rolls back all its changes. Row and parent-authority locks coordinate
+concurrent reconciliation, reviews, reads, erasure and actor revocation through commit.
+RLS/current read gates already close access before materialization. Migration `0006`
+preserves applied `0001`–`0005`, existing bytes and exact prior trigger definitions;
+empty isolated rollback restores them, while recorded lifecycle use requires forward
+repair. This synthetic local workflow does not activate production acquisition or text.
 
 Catalogue HTTP handlers delegate to `api.catalogue` services and transaction-scoped
 repositories in `api.repositories`. Source lists apply metadata permission before SQL
