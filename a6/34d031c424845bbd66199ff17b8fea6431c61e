@@ -1,0 +1,34 @@
+tests/test_postgres_canonical.py
+  s_bf7744477d4397::t_334931b4d1d65b 349
+ingestion/canonical.py
+  s_bf7744477d4397::t_4f2de917272173 37-60,62-63,65-68,70-72,74-78,80-81,83,88,98-99,101-107,111,113,115-116,118-177,181-182,184,187,189,195,197,203,210,212,217,219-220,222,224,227,229-230,232-250,253,255,258,262,267,273,275-277,291,293-334,336-355
+  s_bf7744477d4397::t_573a0e210675df 11,20-24
+rights/acquisition.py
+  s_bf7744477d4397::t_be710604b3fe45 11,20,22,69-70
+rights/canonical.py
+  s_bf7744477d4397::t_1ffbd02db1269c 38-41,43-45
+schema/assembly.py
+  s_bf7744477d4397::t_bcd8f565f3de55 9,157,198
+schema/assembly.schema.json
+  s_bf7744477d4397::t_2ade5ae9ec4fa3 94-137,1690-1691
+schema/diagnostics.py
+  s_bf7744477d4397::t_fd99e668ad1f61 1-37
+tests/fixtures/oa-text-1-golden.json
+  s_bf7744477d4397::t_cfc6c364ce47ab 1-442
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a634d031c424845bbd66199ff17b8fea6431c61e",
+  "prompts": {},
+  "sessions": {
+    "s_bf7744477d4397": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a115c6-96a6-7d92-98fc-051375fcf2b9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
