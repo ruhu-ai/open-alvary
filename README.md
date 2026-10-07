@@ -489,3 +489,51 @@ now clears canonical bytes and metadata atomically while retaining private hashe
 Empty isolated `0008` rollback restores exact `0007` helpers; populated canonical history requires
 forward repair. Public versions, anchors, text routes and atomic independent approval remain future
 work; all canonical projections carry `publication_eligible=false`.
+
+Migration `0009` adds private approval of **original synthetic fixtures only**, using the separate
+`schema/approval.schema.json` contract (`synthetic-approval-1`) and `alvary-operator --approval`.
+It exposes `record_snapshot_review` and `approve_synthetic_version`; it adds no publication command.
+An administrator explicitly declares an expression/manifestation/raw-artifact binding through
+`rights.approval.declare_synthetic_binding`, referencing existing identified work/expression and
+manifestation records with exact collection, digest, size and work-manifestation relationships.
+It creates no identities, observations, retrieval facts, legal editions or authenticity claims.
+Bound identity facts become immutable; correcting them requires a separate forward workflow.
+
+The current collection content reviewer records an exact source-comparison attestation with private
+scoped evidence, binding/snapshot/profile/content hashes and every selected candidate, including
+exclusions. The release maintainer must have native release and acquisition assignments and recheck
+two distinct current rights/content reviewers, six material coverage classes, collection permission,
+source authority and the exact reviewed proposal. The database reconstructs bytes and structure
+again; incomplete material content cannot be approved. This initial slice supports complete human
+source comparison under collection-policy inheritance and no-personal-data authority. Per-version
+exceptions, sampled-native qualification, personal-data derivatives and actual qualified appointments
+require later work. Synthetic attestations do not certify real reviewer competence or source accuracy.
+
+One transaction keyed by expression plus approved snapshot hash mints a private approved version,
+representation, version-owned nodes/anchors, ordered leaves, table/cell links, footnote targets and
+whole-candidate normalization alignment. Physical geometry remains explicitly unavailable; header
+semantics and accessible table quality remain unverified. Current expression and per-version
+representation pointers use exact revision checks. Concurrent retries reuse the committed record
+set. A header-only representation revision can preserve bytes, nodes and anchors; changes to bytes,
+canonical order, spans or grid/node identity require a new version. Historical records stay immutable.
+Public identity resolution, text APIs, exports and preferred public version selection remain disabled.
+
+Authority is checked before loading private input, under source/reviewer/head locks, and again by a
+deferred constraint at caller commit. Expiry or an intervening snapshot edit before commit rolls back
+minting, audit and receipt together. Completed versions own their frozen bytes independently of later
+staging edits; their private reads still require current source/binding and exact collection authority.
+Superseded/revoked authority hides bytes immediately, with reconciliation materializing conservative
+holds. Held versions do not resume automatically; fresh restoration and exception workflows remain
+unimplemented. Native callers have no direct grants on the new private tables.
+
+All new root payloads and canonical bytes enter the existing shared collection/2 MiB artifact budget
+before storage. Identity bindings, source reviews, versions and representation revisions count toward
+128 root records per artifact, including erased history. Child records are separately bounded to
+200 nodes/anchors per version, 50 source cell groups per representation and 100 footnote markers
+per notice/document scope; a representation
+has at most 256 KiB of metadata and 32 revisions per version. Row erasure clears binding/review/version/
+representation payloads and version bytes atomically with existing raw/candidate/snapshot/canonical
+cleanup. Textless private IDs, hashes, offsets, evidence and audit history remain; WAL, backups and other
+copies are outside this boundary. Empty isolated `0009` rollback restores exact `0008` helpers;
+any new binding/review/receipt/version history requires forward repair. All outputs remain
+`publication_eligible=false` and the public pilot still has zero cleared full-text sources.
