@@ -537,3 +537,42 @@ cleanup. Textless private IDs, hashes, offsets, evidence and audit history remai
 copies are outside this boundary. Empty isolated `0009` rollback restores exact `0008` helpers;
 any new binding/review/receipt/version history requires forward repair. All outputs remain
 `publication_eligible=false` and the public pilot still has zero cleared full-text sources.
+
+Migration `0010` adds private correspondence for **original synthetic gazette fixtures only**, through
+`schema/gazette.schema.json` (`synthetic-gazette-1`) and `alvary-operator --gazette`. The separate
+commands are `record_gazette_item_review` and `approve_gazette_item_correspondence`. An administrator
+uses `rights.gazette.declare_synthetic_item_binding` to reference an existing identified item work/
+expression, its association with the issue manifestation, and a complete issue-owned root notice.
+The declaration creates no identities, versions, nodes, anchors or source facts. It requires separate
+issue/item collections, matching language/jurisdiction and an original item expression. Judgment,
+gazette and other item classes, nested notices, multiple intervals, translations and per-version
+exceptions are outside this bounded workflow. Item identity facts become immutable once bound.
+
+A current item content reviewer explicitly identifies one whole notice by its exact UTF-8 range/hash,
+issue version, representation record-set hash, identity binding and serialization profile. Approval
+requires release authority for both collections, acquisition assignments for both, and independent
+current item rights/content review with retention permission. The existing issue source and approval
+checks also apply. Private reads require acquisition authority over the issue and every declared
+item collection. Any pending, stale or withheld declared item denies the dependent issue read and
+all its item projections. This conservative whole-issue gate prevents another projection from
+bypassing the issue owner. Each projection returns an exact substring with its existing issue-owned
+anchor; no projected words or item version bytes are retained separately. Public text stays disabled.
+
+Correspondence heads use exact previous revisions; same-command retries require unchanged actor,
+intent and current authority. A representation edit can commit under the issue's own private
+approval checks, while dependent reads stay denied until a fresh item review/correspondence pins the
+new representation. Superseded or held correspondence cannot resume via retry. Source/reviewer/head
+locks and deferred checks at caller commit protect review, mapping, audit and receipt together.
+All new tables are private under forced RLS, with no direct runtime table grants. The older private
+issue-read function alias loses its runtime grant so it cannot bypass item withholding.
+
+Bindings, reviews and correspondence payloads share the issue collection allocation and existing
+128-root/2 MiB artifact limits, including retained history; item collections acquire no duplicate
+byte allocation. Additional bounds are 50 declarations per issue version, 32 correspondence revisions
+per binding, one complete nonempty notice interval, 64 KiB commands/reviews and 8 KiB binding/
+correspondence payloads. Shared limits can reject work before individual caps. Raw/due erasure clears
+all new root payloads atomically; private identifiers, hashes, offsets and audit history remain.
+WAL, backups and independently retained copies remain outside row cleanup. Empty isolated `0010`
+rollback restores exact prior function bodies/grants and trigger bindings; new correspondence history
+requires forward repair. Existing migrations `0001`–`0009` remain unchanged. This synthetic workflow
+supplies no real identity, reviewer qualification, legal approval or publication authority.
