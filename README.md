@@ -424,3 +424,46 @@ logger. Transport/server logging is separate; the production profile disables ac
 This is diagnostic correlation, not an authenticated actor audit or delivery-byte receipt.
 `/healthz` checks database access to the corpus table; it does not certify source clearance,
 complete migration compatibility, backups or publication readiness.
+
+Migration `0007` provides private original-synthetic candidate and snapshot proposals through
+`rights.assembly.SyntheticAssembly` and `alvary-operator --assembly`. The separate
+`schema/assembly.schema.json` contract (`assembly-proposal-1`) defines `record_synthetic_run`,
+`record_snapshot` and `reconcile_assembly`. Existing review and raw-lifecycle commands keep their
+contracts. The CLI uses the same explicit native PostgreSQL credentials, input and time bounds;
+its responses contain IDs, hashes, revisions or counts, without proposal text or credentials.
+
+Synthetic runs pin a qualified raw artifact, collection, exact assessment revision/hash/purpose,
+original deadline and fixed original-synthetic producer/profile. Candidate IDs remain private
+UUIDs; adapter IDs, hierarchy, region groups and cell proposals are local to a run. Literal text
+(including Unicode controls and whitespace) is preserved. Physical pages and geometry require
+explicit unavailable reasons; candidate quality stays unassessed. Snapshot edits require both
+content and acquisition assignments, select one candidate per declared region, resolve every
+alternative with reasons, and order each selection once. Geometry-based overlap detection,
+composed corrections, extraction qualification and publication are later work. Proposals mint
+no public versions, nodes or anchors and carry no approval status.
+
+Candidates are immutable; snapshot revisions append with an exact current parent and monotonic
+head. Candidate text/payload hashes and snapshot payload checks have database integrity checks.
+Snapshot manifest hashes bind source/assessment/purpose/deadline, run/profile, selected candidate
+hashes, editor, revision, parent and proposal body; parent hashes also have a relational FK.
+These PostgreSQL JSONB manifests are private proposal hashes, not OA-text-1 canonical bytes.
+Native writes and bounded private reads lock/recheck current derive and retain authority before
+loading content, and preserve caller transactions. Identical currently eligible retries reuse
+one receipt; changed requests conflict. Snapshot/run receipts have a separate assembly namespace.
+
+The declared synthetic collection limit now accounts for raw bytes and all retained candidate/
+snapshot payloads, including held or expired material. Bounds are 64 KiB per command, 50 candidates
+per run, four runs and 128 total candidate/snapshot records per raw artifact, 2 MiB of live derived
+payload per artifact, and 32 revisions per snapshot. Candidate reads return at most 50 rows.
+`reconcile_assembly` scans at most 100 raw-artifact IDs with a UUID cursor and reports newly changed
+payload counts. Restart from a null cursor on later passes. It can hold stale derivatives and
+erase rejection/deadline-required payloads; it does not change the raw artifact's state.
+
+Existing raw hold/erasure materialization and scoped raw erasure atomically propagate to the
+bounded derivative family. Removing raw bytes therefore also removes every stored candidate/
+snapshot payload, including prior revisions. Direct SQL cannot mutate payload/lineage or bypass
+this guarded audit path. Negative cleanup remains possible while migration writes are fenced;
+held/erased proposals never resume automatically. Immutable private lineage, hashes, bridge IDs
+and audit metadata remain. PostgreSQL history/WAL/backup and independently retained copies are
+outside this row-erasure boundary. Empty isolated `0007` rollback restores the exact `0006`
+validator and raw state; populated proposal or receipt history requires forward repair.
