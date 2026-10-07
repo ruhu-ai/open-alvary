@@ -318,13 +318,14 @@ All public operations are GET:
 - `/releases`
 - `/releases/{date}/{jurisdiction}/{mode}/{filename}` (allowlisted artifacts)
 
-Source lists and search accept `jurisdiction`, `limit` (maximum 100), and `offset`.
+Source lists and search accept `jurisdiction`, `access` (`all`, `open`, `metadata`), `limit` (maximum 100), and `offset`. Filtering precedes totals and pagination; the reader offers Previous/Next and resets pages when query/filter changes.
 Use the generated `/openapi.json` for the deployed API contract.
 
 ## Releases and verification
 
 ```sh
-pytest -q
+# Fast checks are explicitly partial; full acceptance below requires PostgreSQL.
+pytest --fast -q
 ruff check .
 ruff format --check .
 python -m scripts.generate_schema
@@ -576,3 +577,46 @@ WAL, backups and independently retained copies remain outside row cleanup. Empty
 rollback restores exact prior function bodies/grants and trigger bindings; new correspondence history
 requires forward repair. Existing migrations `0001`–`0009` remain unchanged. This synthetic workflow
 supplies no real identity, reviewer qualification, legal approval or publication authority.
+
+
+Applied migrations `0001`–`0010` remain immutable. Migration `0011` establishes the maintenance path
+in `rights/sql/v0011`: one reviewed SQL file per installed function, with pinned bundle, vocabulary,
+body and definition hashes. PostgreSQL compiles each definition under `check_function_bodies=on`;
+upgrade/downgrade preserve function OIDs, ownership, ACLs and trigger bindings. Unknown installed
+edits or unsafe guard/reader grants require boundary review. Keep each applied resource revision
+unchanged and add a new resource/migration revision for future SQL changes. Historical Python SQL
+is retained for reproducible older installs. New grant capabilities belong in the declarative
+`rights/sql/provision` inventory; provisioning validates the installed objects before creating roles.
+`schema/vocabularies/v1.json` supplies permission/material vocabulary, with mandatory drift checks
+against contracts and frozen migrations. Independent Python/SQL OA-text-1 algorithms stay separate;
+frozen, hand-calculated UTF-8 vectors test both without changing the canonical profile.
+
+Private canonical rejection results now expose allowlisted structural `reason_code` values through
+`assembly-proposal-3`. They include grid coverage, marker UTF-8 boundaries, candidate reuse,
+exclusion mismatch and independent serializer disagreement; no source words, IDs or SQL diagnostics
+are echoed. The compiler separates grid validation, marker mapping and footnote emission.
+
+Full acceptance runs PostgreSQL by default. Supply an isolated `TEST_DATABASE_URL` ending in `_test`
+whose maintenance account can create disposable databases and roles, then run `pytest -q`.
+`pytest --fast -q` explicitly skips PostgreSQL and cannot be treated as acceptance. Most tests clone
+an owned, unseeded session database migrated once, preserving all qualified function/trigger OIDs;
+roles, seeds, appointments and transactions remain per test. Marked fresh-migration cases exercise
+empty/older schemas, and `--fresh-postgres` forces fresh migration for every case. CI runs fast and
+mandatory PostgreSQL steps separately and verifies installed SQL definitions. Tests create/remove
+only their random `oa_*_test` databases; the configured test database and other projects are untouched.
+
+Migration `0012` adds an expression GIN/trigram index over normalized ASCII catalogue metadata.
+SQL counts/orders/pages confirmed matches; Unicode and eligible full-text candidates retain exact
+Python checks with a declared 10,000-candidate fallback bound. Rights are checked before text loads.
+There is no retained search copy of private canonical text. An older schema keeps the bounded
+legacy fallback while upgrading. `pg_trgm` is a standard PostgreSQL extension; downgrade removes
+only an extension introduced by this migration and refuses changed ownership/dependencies.
+Same-day release IDs such as `2026-10-07.1` and `.2` are accepted, alongside unchanged date-only links.
+Each revision is immutable and current withdrawal checks still apply to listings and downloads.
+
+Synthetic appointments and source bindings remain a development boundary. A production path requires
+a separately reviewed identity/provider profile and migrations, current source/rights/privacy/reviewer
+qualification, denial-journal/restore evidence and serving-role adoption. Synthetic rows/bytes cannot
+be relabelled or backfilled as qualified real approvals. Revoke the synthetic RPC grants from
+production groups when the qualified replacement is adopted; retain old immutable evidence and
+isolate fixtures in test environments. No flag activates real appointments or first-text publication.
