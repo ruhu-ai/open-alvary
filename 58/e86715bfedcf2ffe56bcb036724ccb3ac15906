@@ -1,0 +1,27 @@
+deployment/smoke.yaml
+  s_bf7744477d4397::t_ec3b9548353e80 6
+tests/test_postgres_foundation.py
+  s_bf7744477d4397::t_c2801433dc40e7 78
+  s_bf7744477d4397::t_4da004268704b4 1-77,79-110
+scripts/container_smoke.sh
+  s_bf7744477d4397::t_ec3b9548353e80 6,8,20-22
+deployment/runbook.md
+  s_bf7744477d4397::t_3a5750e3053bcc 53-59
+  s_bf7744477d4397::t_90c68319cd67ec 82-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "58e86715bfedcf2ffe56bcb036724ccb3ac15906",
+  "prompts": {},
+  "sessions": {
+    "s_bf7744477d4397": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a115c6-96a6-7d92-98fc-051375fcf2b9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Ijidai Lassa <ijidai@cued.app>"
+    }
+  }
+}
